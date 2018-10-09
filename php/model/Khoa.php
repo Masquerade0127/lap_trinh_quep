@@ -3,7 +3,7 @@ require_once("connect.php");
 class Khoa{
 	private $id;
 	private $ten_khoa;
-	private $connect = new Connect();
+
 	// contructor
 	function __contruct(){}
 
@@ -31,8 +31,16 @@ class Khoa{
 	 *output: tên khoa
 	 */
 	public function TenKhoa($id){
+		$ten_khoa;
 		$query = "select ten_khoa form khoa where ID = " . $id;
-		$result = $connect->getConnect();
+		$result = mysqli_query(Connect::getConnect(), $query);
+		while($row = mysqli_fetch_assoc($result)){
+			$ten_khoa = $row["ten_khoa"];
+		}
+		echo "đã select xong";
+		return $ten_khoa;
 	}
 }
+$kh = new Khoa();
+$kh->TenKhoa();
 ?>
