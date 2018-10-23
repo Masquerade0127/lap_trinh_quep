@@ -2,7 +2,6 @@
 require_once('Connect.php');
 class Root{
 	private $id;
-	public $id_2;
 	/*
 	 * get id
 	 * input: none

@@ -9,11 +9,6 @@ class Lop extends Root{
 	// contructor
 	function __contruct(){}
 
-	// lấy id của lop, vì id tự tăng nên không cần set
-	public function getId(){
-		return $this->id;
-	}
-
 	/*
 	 * get, set ma_nganh
 	 */

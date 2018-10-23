@@ -7,9 +7,7 @@ class Khoa extends Root{
 	function __contruct(){}
 
 	/*
-	 * đặt tên khoa theo tham số truyền vào
-	 * input: chuỗi tên khoa
-	 * output: none
+	 * get, set ten_khoa
 	 */
 	public function setTenKhoa($ten_khoa){
 		$this->ten_khoa = $ten_khoa;

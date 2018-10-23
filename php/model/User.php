@@ -12,9 +12,5 @@ class User extends Root{
 	function getPassword(){
 		return $this->password;
 	}
-
-	/*get session*/
-	function getSession(){
-	}
 }
 ?>

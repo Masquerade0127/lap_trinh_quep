@@ -11,7 +11,6 @@ class Nganh extends Root{
 	/*
 	 * get, set ma_khoa
 	 */
-	 */
 	public function setTenNganh($ten_nganh){
 		$this->ten_nganh = $ten_nganh;
 	}
@@ -21,7 +20,6 @@ class Nganh extends Root{
 
 	/*
 	 * get, set ten_nganh
-	 */
 	 */
 	public function setTenNganh($ten_nganh){
 		$this->ten_nganh = $ten_nganh;
