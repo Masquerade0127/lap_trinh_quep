@@ -1,18 +1,41 @@
 <?php
-class Lop extends Nienkhoa extends nganh{}
-	private $id;
+require("Root");
+class Lop extends Root{
+	private $ma_nganh;
+	private $ma_nien_khoa;
 	private $nam;
-	private $ten_lop
+	private $ten_lop;
+
 	// contructor
 	function __contruct(){}
+
 	// lấy id của lop, vì id tự tăng nên không cần set
 	public function getId(){
 		return $this->id;
 	}
+
 	/*
-	 * đặt năm theo tham số truyền vào
-	 * input: chuỗi năm
-	 * output: none
+	 * get, set ma_nganh
+	 */
+	public function setMaNganh($ma_nganh){
+		$this->ma_nganh = $ma_nganh;
+	}
+	public function getMaNganh(){
+		return $this->ma_nganh;
+	}
+
+	/*
+	 * get, set ma_nien_khoa
+	 */
+	public function setMaNienKhoa($ma_nien_khoa){
+		$this->ma_nien_khoa = $ma_nien_khoa;
+	}
+	public function getMaNienKhoa(){
+		return $this->ma_nien_khoa;
+	}
+
+	/*
+	 * get, set nam
 	 */
 	public function setNam($nam){
 		$this->nam = $nam;
@@ -20,35 +43,15 @@ class Lop extends Nienkhoa extends nganh{}
 	public function getnam(){
 		return $this->nam;
 	}
+
 	/*
-	 * đặt tên lớp theo tham số truyền vào
-	 * input: chuỗi tên lớp
-	 * output: none
+	 * get, set tên lớp
 	 */
 	public function setTenlop($ten_lop){
 		$this->ten_lop = $ten_lop;
 	}
 	public function getTenlop(){
 		return $this->ten_lop;
-	}
-	
-	public function TenNganh(){
-		$this->id;
-	}
-	public function Thoigianbatdau(){
-		$this->id;
-	}
-	public function Thoigianketthuc(){
-		$this->id;
-	}
-	/*
-	 *lấy tên lớp theo id
-	 *input: $id
-	 *output: tên lớp
-	 */
-	public function TenLop($id){
-		$query = "select ten_lop form lop where ID = " . $id;
-		$result = $connect->getConnect();
 	}
 }
 ?>
