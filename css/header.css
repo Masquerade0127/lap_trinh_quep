@@ -1,0 +1,71 @@
+@media all and (min-width: 300px){
+	#header{
+		background: url("../image/header_mobile.png") no-repeat left top fixed;
+	}
+	#header img{
+		display: none;
+	}
+	#header object{
+		display: block;
+		width: 22%;
+		margin: auto;
+		padding-top: 3%;
+		padding-bottom: 3%;
+	}
+	#header p{
+		display: none;
+	}
+}
+
+@media all and (min-width: 700px){
+	#header{
+		position: relative;
+		background-image: none;
+	}
+	#header img{
+		display: block;
+		z-index: 0;
+		width: 100%;
+	}
+	#header object{
+		position: absolute;
+		width: 13%;
+		margin: 0;
+		padding: 0;
+		top: 13%;
+		left: 21.7%;
+	}
+	#header p{
+		display: block;
+		position: absolute;
+		color: white;
+		font-size: 150%;
+		top: 36%;
+		left: 43%;
+		font-family: time new roman;
+	}
+}
+
+@media all and (min-width: 1024px){
+	#header object{
+		position: absolute;
+		top: 13%;
+		left: 21.7%;
+		width: 13%;
+		margin: 0;
+		padding: 0 0 0 0;
+	}
+	#header p{
+		font-size: 200%;
+		top: 35%;
+		left: 43%;
+	}
+}
+
+@media all and (min-width: 1025px){
+	#header p{
+		font-size: 250%;
+		top: 35%;
+		left: 43%;
+	}
+}
