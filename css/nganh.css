@@ -1,0 +1,56 @@
+#content
+{
+    width: auto;
+    height: auto;
+    background-image: url(../image/bgr_content.PNG);
+    background-size:  cover;
+
+}
+#noidung
+{
+    height: 900px;
+}
+#content-left
+{
+    width: 250px;
+    height: 500px;
+    float: left;
+    background: #fff;
+    margin: 50px;
+    border-radius: 15px;
+}
+#content-right
+{
+    width: 700px;
+    height: 500px;
+    float: left;
+    background: #fff;
+    margin: 50px;
+    border-radius: 15px;
+}
+#user{
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    height: 80px;
+}
+.tieude{
+	margin-top: 10px;
+}
+.kengang {
+    width: 700px;
+    height: 2px;
+    background-color: #808080;
+    display: inline-block;
+}
+.chon
+{
+	margin-top: 20px;
+	padding-left: 200px;
+
+}
+.btn
+{
+	margin-top: 20px;
+	margin-left: 110px; 
+}
