@@ -1,4 +1,7 @@
 @media all and (min-width: 300px){
+	body{
+		background-color: white;
+	}
 	#header{
 		background: url("../image/header_mobile.png") no-repeat left top fixed;
 	}
