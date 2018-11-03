@@ -9,14 +9,15 @@ create table khoa(
 create table nganh(
 	ID int auto_increment primary key,
     ma_khoa int not null,
-    ten_nganh char not null,
+    ten_nganh char(50) not null,
     foreign key (ma_khoa) references khoa(ID) on delete cascade on update cascade
 );
 
 create table nien_khoa(
 	ID int auto_increment primary key,
     thoi_gian_bat_dau date not null,
-    thoi_gian_ket_thuc date not null
+    thoi_gian_ket_thuc date not null,
+    khoa char(5) not null
 );
 
 create table lop(
@@ -67,10 +68,15 @@ create table de_thi(
 
 create table cau_hoi(
 	ID int auto_increment primary key,
-    ma_de_thi int not null,
     noi_dung varchar(500) not null,
-    muc_do int(3) not null,
-    foreign key (ma_de_thi) references de_thi(ID) on delete cascade on update cascade
+    muc_do int(3) not null
+);
+
+create table dethi_cauhoi(
+	ma_de_thi int not null,
+    ma_cau_hoi int not null,
+    foreign key (ma_de_thi) references de_thi(ID) on delete cascade on update cascade,
+    foreign key (ma_cau_hoi) references cau_hoi(ID) on delete cascade on update cascade
 );
 
 create table dap_an(

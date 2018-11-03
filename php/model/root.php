@@ -1,6 +1,6 @@
 <?php
 require_once('Connect.php');
-class Root{
+class Root extends Connect{
 	private $id;
 
 	/*get ID*/
@@ -36,7 +36,7 @@ class Root{
 	}
 }
 /*$khoa = new Root();
-foreach ($khoa->getColumnValue(2,"khoa","*") as $key) {
- 	echo $key["ten_khoa"];
+foreach ($khoa->getColumnValue(2,"khoa","*") as $key => $value) {
+ 	echo $value["ten_khoa"];
 }*/
 ?>

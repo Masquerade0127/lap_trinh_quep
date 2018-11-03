@@ -8,24 +8,40 @@ class Nganh extends Root{
 	function __contruct(){}
 	
 
-	/*
-	 * get, set ma_khoa
-	 */
-	public function setTenNganh($ten_nganh){
+	/*get, set ma_khoa*/
+	function setMaKhoa($ma_khoa){
+		$this->ma_khoa = $ma_khoa;
+	}
+	function getMaKhoa(){
+		return $this->ma_khoa;
+	}
+
+	/*get, set ten_nganh*/
+	function setTenNganh($ten_nganh){
 		$this->ten_nganh = $ten_nganh;
 	}
-	public function getTenNganh(){
+	function getTenNganh(){
 		return $this->ten_nganh;
 	}
 
 	/*
-	 * get, set ten_nganh
+	 * select tat ca nganh thuoc khoa
+	 * input: id khoa
+	 * output: mang cac nganh
 	 */
-	public function setTenNganh($ten_nganh){
-		$this->ten_nganh = $ten_nganh;
-	}
-	public function getTenNganh(){
-		return $this->ten_nganh;
+	function getNganh($id_khoa){
+		$query = "select * from nganh where ma_khoa=$id_khoa";
+		$result = Root::getConnect()->query($query);
+		$index = 0;
+		while ($row = mysqli_fetch_assoc($result)) {
+			$array[$index] = $row;
+			$index++;
+		}
+		return $array;
 	}
 }
+/*$nganh = new Nganh();
+foreach ($nganh->getNganh(1) as $value) {
+	echo $value["ma_khoa"]. " ". $value["ten_nganh"];
+}*/
 ?>

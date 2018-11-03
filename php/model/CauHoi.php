@@ -1,5 +1,5 @@
 <?php
-require("Root.php");
+require_once("Root.php");
 class CauHoi extends Root{
 	private $ma_de_thi;
 	private $noi_dung;
@@ -36,5 +36,17 @@ class CauHoi extends Root{
 	function getMucDo(){
 		return $this->muc_do;
 	}
+
+	/*
+	 * insert dap an
+	 * input: noi dung, muc do
+	 * output: none
+	 */
+	function setCauHoi($noi_dung,$muc_do){
+		$query = "insert into cau_hoi (noi_dung,muc_do) values (N'$noi_dung', $muc_do)";
+		Root::getConnect()->query($query);
+	}
 }
+/*$cau_hoi = new CauHoi();
+$cau_hoi->setCauHoi("cà lê cà lê", 0);*/
 ?>

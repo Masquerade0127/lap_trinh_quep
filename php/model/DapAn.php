@@ -36,5 +36,18 @@ class DapAn extends Root{
 	function getTrangThai(){
 		return $this->trang_thai;
 	}
+
+	/*
+	 * insert dap an
+	 * input: id noi dung, dap an
+	 * output: none
+	 */
+	function setCauHoi($ma_cau_hoi, $noi_dung, $trang_thai){
+		$query = "insert into dap_an (ma_cau_hoi, noi_dung, trang_thai) values ($ma_cau_hoi, N'$noi_dung', N'$trang_thai')";
+		Root::getConnect()->query($query);
+	}
+	
 }
+/*$dap_an = new DapAn();
+$dap_an->setCauHoi(1, "2", "dung");*/
 ?>
