@@ -9,8 +9,12 @@ class User extends Root{
 	function setPassword($password){
 		$this->password = $password;
 	}
-	function getPassword(){
-		return $this->password;
+	function getPassword($id){
+		foreach ($this->getColumnValue($id, "user", "password") as $value) {
+			return $value["password"];
+		}
 	}
 }
+/*$r = new User();
+echo "wtf".$r->getPassword(1);*/
 ?>

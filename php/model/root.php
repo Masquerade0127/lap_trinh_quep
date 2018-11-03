@@ -5,7 +5,7 @@ class Root extends Connect{
 
 	/*get ID*/
 	function getId(){
-		return $this->id;
+		
 	}
 
 	/*
