@@ -24,8 +24,7 @@ create table lop(
 	ID int auto_increment primary key,
     ma_nganh int not null,
     ma_nien_khoa int not null,
-    nam int not null,
-    ten_lop char not null,
+    ten_lop char(50) not null,
     foreign key (ma_nganh) references nganh(ID) on delete cascade on update cascade,
     foreign key (ma_nien_khoa) references nien_khoa(ID) on delete cascade on update cascade
 );
@@ -36,7 +35,7 @@ create table giang_vien(
     ten_gv varchar(50) not null,
     ngay_sinh date not null,
     dia_chi varchar(200) not null,
-    sdt char(10) not null,
+    sdt char(12) not null,
     email varchar(50) not null,
 	foreign key (ma_nganh) references nganh(ID) on delete cascade on update cascade
 );
@@ -50,7 +49,7 @@ create table mon(
 
 create table user(
 	ID int not null primary key,
-    password char not null,
+    password char(255) not null,
     foreign key (ID) references giang_vien(ID) on delete cascade on update cascade
 );
 

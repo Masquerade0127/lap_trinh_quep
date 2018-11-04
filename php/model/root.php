@@ -30,13 +30,35 @@ class Root extends Connect{
 	 * output: none
 	 */
 	function checkLoggin(){
-		if (!isset($_SESSION["id"]) && !isset($_SESSION["password"])) {
-			header("http://localhost/lap_trinh_quep/loggin.html");
+		session_start();
+		if (!isset($_SESSION["ID"]) && !isset($_SESSION["password"])) {
+			header("Location: http://localhost/lap_trinh_quep/loggin.html");
 		}
 	}
+
+	/*
+	 * ma hoa password theo chuan SHA256
+	 * input: password
+	 * output: chuoi SHA256
+	 */
+	function encryptPassword($password){
+		return hash("sha256", $password);
+	}
+
+	/*
+	 * insert user
+	 * input: 
+	 * output: 
+	 */
+	function insertUser($id, $password){
+		$pass = hash("sha256", $password);
+		$query = "insert into user(ID, password) values($id, '$pass')";
+		Connect::getConnect()->query($query);
+	}
 }
-/*$khoa = new Root();
-foreach ($khoa->getColumnValue(2,"khoa","*") as $key => $value) {
+$khoa = new Root();
+/*foreach ($khoa->getColumnValue(2,"khoa","*") as $key => $value) {
  	echo $value["ten_khoa"];
 }*/
+$khoa->insertUser(1, 12345);
 ?>
