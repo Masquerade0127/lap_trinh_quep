@@ -51,7 +51,7 @@ class Root extends Connect{
 	 * output: 
 	 */
 	function insertUser($id, $password){
-		$pass = hash("sha256", $password);
+		$pass = $this->encryptPassword($password);
 		$query = "insert into user(ID, password) values($id, '$pass')";
 		Connect::getConnect()->query($query);
 	}
@@ -60,5 +60,5 @@ $khoa = new Root();
 /*foreach ($khoa->getColumnValue(2,"khoa","*") as $key => $value) {
  	echo $value["ten_khoa"];
 }*/
-$khoa->insertUser(1, 12345);
+$khoa->insertUser(1, "12345");
 ?>
