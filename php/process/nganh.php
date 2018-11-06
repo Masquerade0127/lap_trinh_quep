@@ -1,6 +1,6 @@
 <?php
 	include("../../html/component/header.html");
-	include("../../html/component/menu.html");
+	include("../../html/component/menu.html")
 ?>
 <?php
 	include("../model/Root.php");
@@ -57,7 +57,7 @@
 						<label for="">Nhập câu hỏi khó:</label>
 						<input type="" name=""class="form-control" style="width: 300px"/>
 					</div>
-					<button type="button" class="btn">Tạo đề</button>
+					<button type="button" class="btn" style="margin-left:110px; margin-top: 20px">Tạo đề</button>
 					
 				</form>
 			</div>
@@ -65,4 +65,4 @@
 </div>
 <?php
 	include("../../html/component/footer.html");
-?> 
+?>
