@@ -20,4 +20,4 @@ insert into lop(ma_nganh, ma_nien_khoa, ten_lop)
 values (3, 1, 'Kỹ thuật phần mềm');
 
 insert into giang_vien(ma_nganh, ten_gv, ngay_sinh, dia_chi, sdt, email)
-values (3, N'Đặng Thị Mông Vui', '1997-01-20', N'Trà Vinh', 0906159062);
+values (3, N'Đặng Thị Mông Vui', '1997-01-20', N'Trà Vinh', '0906159062', 'dtmvui.ktpm0115@student.ctuet.edu.vn');

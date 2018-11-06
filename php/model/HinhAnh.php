@@ -2,7 +2,8 @@
 require("Root.php");
 class HinhAnh extends Root{
 	private $ma_cau_hoi;
-	private $url;
+	private $urlCauHoi = "../../image/cau_hoi/";
+	private $urlDapAn = "../../image/dap_an/";
 
 	function __construct(){}
 
@@ -19,11 +20,42 @@ class HinhAnh extends Root{
 	/*
 	 * get, set url
 	 */
-	function setUrl($url){
-		$this->url = $url;
+	function getUrlCauHoi(){
+		return $this->urlCauHoi;
 	}
-	function getUrl(){
-		return $this->url;
+	function getUrlDapAn(){
+		return $this->urlDapAn;
+	}
+
+	/*
+	 * tai hinh anh len server
+	 * input: ten hinh anh
+	 * output: url tap tin luu hinh anh
+	 */
+	function loadImages($image_name, $url){
+		$file_tmp = $image_name["tmp_name"];
+
+		//cat ten hinh anh thang mang
+		$file_name_array = explode(".",$image_name["name"]);
+		
+		//lay duoi file
+		$file_extensions = strtolower(end($file_name_array));
+		$extensions = array("jpeg", "jpg", "png");
+		$error = array();
+
+		//kiem tra duoi file có nam trong danh sach duoi file hinh anh hay khong
+		if(in_array($file_extensions, $extensions) === false){
+			$error[] = "lỗi! sai định dạng";
+		}
+		else if (empty($error) == true && ($url == "cau_hoi")) {
+			move_uploaded_file($file_tmp, $this->getUrlCauHoi().$image_name["name"]);
+		}
+		else if (empty($error) == true && ($url == "dap_an")) {
+			move_uploaded_file($file_tmp, $this->getUrlDapAn().$image_name["name"]);
+		}
+		else{
+			echo "lỗi tải hình ảnh";
+		}
 	}
 }
 ?>
