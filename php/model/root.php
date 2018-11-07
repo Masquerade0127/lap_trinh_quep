@@ -9,7 +9,7 @@ class Root extends Connect{
 	}
 
 	/*
-	 * lay gia tri cot cua bang theo od
+	 * lay gia tri cot cua bang theo id
 	 * input: id, table, column
 	 * output: mang cac gia tri cua cot
 	 */
@@ -23,6 +23,22 @@ class Root extends Connect{
 		}
 		return $array;
 	}
+
+	/*
+	 * lay tat ca cac cot
+	 * input: table
+	 * output: mang cac gia tri cua cot
+	 */
+	function getColumnValue($table){
+		$query = "select * from $table";
+		$result = Connect::getConnect()->query($query);
+		$index = 0;
+		while ($row = mysqli_fetch_assoc($result)) {
+			$array[$index] = $row;
+			$index++;
+		}
+		return $array;
+	}	
 
 	/*
 	 * kiem tra dang nhap
