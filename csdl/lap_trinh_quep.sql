@@ -71,18 +71,17 @@ create table cau_hoi(
     muc_do int(3) not null
 );
 
+create table dethi_cauhoi(
+	ma_de_thi int not null,
+    ma_cau_hoi int not null,
+    foreign key (ma_de_thi) references de_thi(ID) on delete cascade on update cascade,
+    foreign key (ma_cau_hoi) references cau_hoi(ID) on delete cascade on update cascade
+);
+
 create table dap_an(
 	ID int auto_increment primary key,
     noi_dung varchar(100),
     trang_thai enum('dung', 'sai'),
-    foreign key (ma_cau_hoi) references cau_hoi(ID) on delete cascade on update cascade
-);
-
-create table cauhoi_dapan(
-	ma_dap_an int not null,
-    ma_cau_hoi int not null,
-    foreign key (ma_dap_an) references dap_an(ID) on delete cascade on update cascade,
-    foreign key (ma_cau_hoi) references cau_hoi(ID) on delete cascade on update cascade
 );
 
 create table hinh_anh(
