@@ -76,19 +76,18 @@ create table cau_hoi(
 create table dap_an(
 	ID int auto_increment primary key,
     noi_dung varchar(100),
-    trang_thai enum('dung', 'sai'),
-);
-
-create table cauhoi_dapan(
-	ma_dap_an int not null,
-    ma_cau_hoi int not null,
-    foreign key (ma_dap_an) references dap_an(ID) on delete cascade on update cascade,
-    foreign key (ma_cau_hoi) references cau_hoi(ID) on delete cascade on update cascade
+    trang_thai enum('dung', 'sai')
 );
 
 create table hinh_anh(
 	ID int auto_increment primary key,
     ma_cau_hoi int not null,
     url text not null,
+    foreign key (ma_cau_hoi) references cau_hoi(ID) on delete cascade on update cascade
+);
+create table cauhoi_dapan(
+	ma_dap_an int not null,
+    ma_cau_hoi int not null,
+    foreign key (ma_dap_an) references dap_an(ID) on delete cascade on update cascade,
     foreign key (ma_cau_hoi) references cau_hoi(ID) on delete cascade on update cascade
 );
