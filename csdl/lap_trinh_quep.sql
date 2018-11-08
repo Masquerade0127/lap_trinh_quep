@@ -43,7 +43,7 @@ create table giang_vien(
 create table mon(
 	ID int auto_increment primary key,
     ma_nganh int not null,
-    ten_mon varchar(10),
+    ten_mon varchar(50),
     foreign key (ma_nganh) references nganh(ID) on delete cascade on update cascade
 );
 
@@ -67,12 +67,15 @@ create table de_thi(
 
 create table cau_hoi(
 	ID int auto_increment primary key,
+    id_mon_hoc int not null,
     noi_dung varchar(500) not null,
-    muc_do int(3) not null
+    muc_do int(3) not null,
+    foreign key (id_mon_hoc) references mon(ID) on delete cascade on update cascade
 );
 
 create table dap_an(
 	ID int auto_increment primary key,
+    ma_cau_hoi int not null,
     noi_dung varchar(100),
     trang_thai enum('dung', 'sai'),
     foreign key (ma_cau_hoi) references cau_hoi(ID) on delete cascade on update cascade
