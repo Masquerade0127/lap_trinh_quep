@@ -24,3 +24,4 @@ values (3, N'Đặng Thị Mông Vui', '1997-01-20', N'Trà Vinh', '0906159062',
 
 insert into mon(ma_nganh, ten_mon)
 values (3, N'kiến trúc máy tính');
+
