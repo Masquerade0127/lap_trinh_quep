@@ -24,4 +24,10 @@ values (3, N'Đặng Thị Mông Vui', '1997-01-20', N'Trà Vinh', '0906159062',
 
 insert into mon(ma_nganh, ten_mon)
 values (3, N'kiến trúc máy tính');
+insert into mon(ma_nganh, ten_mon)
+values (3, N'kỹ thuật lập trình');
+insert into mon(ma_nganh, ten_mon)
+values (3, N'toán rời rạc');
 
+insert into dap_an(noi_dung, trang_thai)
+values (N'là hệ quản trị csdl', 'sai');
