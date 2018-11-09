@@ -9,7 +9,7 @@ class Connect{
 	 * output: $connect
 	 */
 	function getConnect(){
-		$connect = new PDO("mysql:dbname=lap_trinh_quep;host:localhost;charset:utf8", "giang_vien", "AlphaHydranoid0123");
+		$connect = new PDO("mysql:dbname=lap_trinh_quep;host:localhost;charset:utf8", "root", "");
 		return $connect;
 	}
 }
