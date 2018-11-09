@@ -67,10 +67,10 @@ create table de_thi(
 
 create table cau_hoi(
 	ID int auto_increment primary key,
-    id_mon_hoc int not null,
+    ma_mon_hoc int not null,
     noi_dung varchar(500) not null,
-    muc_do int(3) not null,
-    foreign key (id_mon_hoc) references mon(ID) on delete cascade on update cascade
+    muc_do enum('0', '1', '2') not null,
+    foreign key (ma_mon_hoc) references mon(ID) on delete cascade on update cascade
 );
 
 create table dap_an(
@@ -79,15 +79,19 @@ create table dap_an(
     trang_thai enum('dung', 'sai')
 );
 
+create table cauhoi_dapan(
+	ma_dap_an int not null,
+    ma_cau_hoi int not null,
+    foreign key (ma_dap_an) references dap_an(ID) on delete cascade on update cascade,
+    foreign key (ma_cau_hoi) references cau_hoi(ID) on delete cascade on update cascade
+);
+
 create table hinh_anh(
 	ID int auto_increment primary key,
     ma_cau_hoi int not null,
     url text not null,
     foreign key (ma_cau_hoi) references cau_hoi(ID) on delete cascade on update cascade
 );
-create table cauhoi_dapan(
-	ma_cau_hoi int not null,
-    ma_dap_an int not null,
-    foreign key (ma_dap_an) references dap_an(ID) on delete cascade on update cascade,
-    foreign key (ma_cau_hoi) references cau_hoi(ID) on delete cascade on update cascade
-);
+
+CREATE USER 'giang_vien'@'localhost' IDENTIFIED VIA mysql_native_password USING '***';
+GRANT INSERT, UPDATE, DELETE, FILE ON *.* TO 'giang_vien'@'localhost' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;

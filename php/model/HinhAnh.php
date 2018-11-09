@@ -57,5 +57,11 @@ class HinhAnh extends Root{
 			echo "lỗi tải hình ảnh";
 		}
 	}
+
+	/*
+	 * save url hinh anh
+	 * input: ten hinh anh
+	 * output: none
+	 */
 }
 ?>

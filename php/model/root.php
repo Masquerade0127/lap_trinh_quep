@@ -29,7 +29,7 @@ class Root extends Connect{
 	 * input: table
 	 * output: mang cac gia tri cua cot
 	 */
-	function getColumnValue($table){
+	function getColumn($table){
 		$query = "select * from $table";
 		$result = Connect::getConnect()->query($query);
 		$index = 0;
