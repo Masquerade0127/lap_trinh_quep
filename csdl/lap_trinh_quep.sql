@@ -93,5 +93,3 @@ create table hinh_anh(
     foreign key (ma_cau_hoi) references cau_hoi(ID) on delete cascade on update cascade
 );
 
-CREATE USER 'giang_vien'@'localhost' IDENTIFIED VIA mysql_native_password USING '***';
-GRANT INSERT, UPDATE, DELETE, FILE ON *.* TO 'giang_vien'@'localhost' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
