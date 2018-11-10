@@ -76,5 +76,6 @@ $khoa = new Root();
 /*foreach ($khoa->getColumnValue(2,"khoa","*") as $key => $value) {
  	echo $value["ten_khoa"];
 }*/
-$khoa->insertUser(1, "12345");
+// $khoa->insertUser(1, "12345");
+$khoa->insertUser(1, 1);
 ?>

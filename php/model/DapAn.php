@@ -43,8 +43,10 @@ class DapAn extends Root{
 	 * output: none
 	 */
 	function setDapAn($noi_dung, $trang_thai){
-		$query = "insert into dap_an (noi_dung, trang_thai) values (N'$noi_dung', N'$trang_thai')";
-		Root::getConnect()->query($query);
+		if($noi_dung != ""){
+			$query = "insert into dap_an (noi_dung, trang_thai) values (N'$noi_dung', N'$trang_thai')";
+			Root::getConnect()->query($query);	
+		}
 	}
 	
 }

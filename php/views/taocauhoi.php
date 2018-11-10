@@ -22,26 +22,27 @@
 		</div>
 		<div class="col-8" id="menu_right"">
 			<div class="form-create-question-wrapper" style="margin-top: 5%">
-					<form action="/action_page.php" id="form-create-question" method="post" enctype="multipart/form-data">
+					<form action="../process/tao_cau_hoi.php" id="form-create-question" method="post" enctype="multipart/form-data">
 						<h1 style="text-align: center;">TẠO CÂU HỎI<img src="../../image/icon_author.png" alt="icon author"/></h1>
-						<b><h3><span style="color: black">CÂU 1</span></h3></b>
-							<div class="form-group">
-								<div style="color: black">* Nội dung câu hỏi:</div>
-								<div class="content-question-group">
+						
+						<b><h3><span style="color: black">CÂU HỎI</span></h3></b>
+						<div class="form-group">
+							<div style="color: black">* Nội dung câu hỏi:</div>
+							<div class="content-question-group">
 								<div style="justify-content: space-between;width: 450px">
 									<div class="file-attachment-group">
 										<select name="cauhoi" class="form-control" style="width: 100px">
-					    					<option selected>Dễ</option>
-					    					<option value="volvo">Trung bình</option>
-					   						<option value="fiat">Khó</option>
-					   					 </select>
-					   			 		<input style="border-radius: 10px;background-color: #0033CC;width: 100%" type="file" class="alert-link" name="image_cau_hoi"></input>
+					    					<option selected>De</option>
+					    					<option value="volvo">Trung binh</option>
+					   						<option value="fiat">Kho</option>
+					   					</select>
+				   			 			<input style="border-radius: 10px;background-color: #0033CC;width: 100%" type="file" class="alert-link" name="image_cau_hoi"></input>
 									</div>
 								</div>
 								<textarea class="form-control" rows="3" id="comment" name="text_cauhoi"></textarea>
 							</div>
 						</div>
-						</div>
+
 						<b><h3><span>ĐÁP ÁN</span></h3></b>
 						<div class="form-group">
 							<div><span>Đáp án A<span></div>
@@ -58,6 +59,7 @@
 								<textarea class="form-control" rows="3" id="comment" name="text_dapan1"></textarea>
 							</div>
 						</div>
+
 						<div class="form-group">
 							<div><span>Đáp án B<span></div>
 							<div class="content-question-group">
@@ -73,6 +75,7 @@
 								<textarea class="form-control" rows="3" id="comment" name="text_dapan2"></textarea>
 							</div>
 						</div>
+
 						<div class="form-group">
 							<div><span>Đáp án C<span></div>
 							<div class="content-question-group">
@@ -88,6 +91,7 @@
 								<textarea class="form-control" rows="3" id="comment" name="text_dapan3"></textarea>
 							</div>
 						</div>
+
 						<div class="form-group">
 							<div><span>Đáp án D<span></div>
 							<div class="content-question-group">
@@ -103,6 +107,7 @@
 								<textarea class="form-control" rows="3" id="comment" name="text_dapan4"></textarea>
 							</div>
 						</div>
+
 						<div class="form-group">
 							<div><span>Đáp án E<span></div>
 							<div class="content-question-group">
@@ -118,6 +123,7 @@
 								<textarea class="form-control" rows="3" id="comment" name="text_dapan5"></textarea>
 							</div>
 						</div>
+
 						<div class="form-group">
 							<div><span>Đáp án F<span></div>
 							<div class="content-question-group">
@@ -133,8 +139,9 @@
 								<textarea class="form-control" rows="3" id="comment" name="text_dapan6"></textarea>
 							</div>
 						</div>
+
 						<div class="button-form-submit">
-							<button type="submit" class="btn btn-secondary" style="margin-right: 20px;">
+							<button type="submit" action="../process/tao_cau_hoi.php" class="btn btn-secondary" style="margin-right: 20px;" name="submit">
 							<img src="../../image/icon_ok.png" alt="icon ok" style="width: 60%;height: 30px"/>LƯU</button>
 							<button type="submit" class="btn btn-secondary">
 							<img src="../../image/icon_exit.png" alt="icon link" style="width: 60%;height: 30px"/>HỦY</button>

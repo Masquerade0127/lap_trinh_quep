@@ -42,9 +42,11 @@ class CauHoi extends Root{
 	 * input: noi dung, muc do
 	 * output: none
 	 */
-	function setCauHoi($noi_dung,$muc_do){
-		$query = "insert into cau_hoi (noi_dung,muc_do) values (N'$noi_dung', $muc_do)";
-		Root::getConnect()->query($query);
+	function insertCauHoi($noi_dung,$muc_do){
+		if($noi_dung != ""){
+			$query = "insert into cau_hoi (noi_dung,muc_do) values (N'$noi_dung', $muc_do)";
+			Root::getConnect()->query($query);	
+		}
 	}
 }
 /*$cau_hoi = new CauHoi();
