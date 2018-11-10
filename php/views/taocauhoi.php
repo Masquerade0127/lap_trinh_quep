@@ -32,9 +32,9 @@
 								<div style="justify-content: space-between;width: 450px">
 									<div class="file-attachment-group">
 										<select name="cauhoi" class="form-control" style="width: 100px">
-					    					<option selected>De</option>
-					    					<option value="volvo">Trung binh</option>
-					   						<option value="fiat">Kho</option>
+					    					<option selected>Dể</option>
+					    					<option value="volvo">Trung bình</option>
+					   						<option value="fiat">Khó</option>
 					   					</select>
 				   			 			<input style="border-radius: 10px;background-color: #0033CC;width: 100%" type="file" class="alert-link" name="image_cau_hoi"></input>
 									</div>
