@@ -1,5 +1,5 @@
 <?php
-require("Root.php");
+require_once("Root.php");
 class Nienkhoa extends Root{
 	private $thoi_gian_bat_dau;
 	private $thoi_gian_ket_thuc;

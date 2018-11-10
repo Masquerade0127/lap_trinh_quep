@@ -1,5 +1,5 @@
 <?php
-require("Root.php");
+require_once("Root.php");
 class GiangVien extends Root{
 	private $ma_nganh;
 	private $ten_gv;

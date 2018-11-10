@@ -1,5 +1,5 @@
 <?php
-require("Root.php");
+require_once("Root.php");
 class HinhAnh extends Root{
 	private $ma_cau_hoi;
 	private $urlCauHoi = "../../image/cau_hoi/";
@@ -32,8 +32,8 @@ class HinhAnh extends Root{
 	 * input: ten hinh anh
 	 * output: url tap tin luu hinh anh
 	 */
-	function loadImages($image_name, $url){
-		if($image_name["size"] > 0){
+	function insertImages($image_name, $url){
+		if($image_name["size"] >= 0){
 			$file_tmp = $image_name["tmp_name"];
 
 			//cat ten hinh anh thang mang

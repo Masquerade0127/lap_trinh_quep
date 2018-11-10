@@ -1,5 +1,5 @@
 <?php
-require("Root.php");
+require_once("Root.php");
 class User extends Root{
 	private $password;
 

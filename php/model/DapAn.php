@@ -1,5 +1,5 @@
 <?php
-require("Root.php");
+require_once("Root.php");
 class DapAn extends Root{
 	private $ma_cau_hoi;
 	private $noi_dung;
@@ -42,7 +42,7 @@ class DapAn extends Root{
 	 * input: id noi dung, dap an
 	 * output: none
 	 */
-	function setDapAn($noi_dung, $trang_thai){
+	function insertDapAn($noi_dung, $trang_thai){
 		if($noi_dung != ""){
 			$query = "insert into dap_an (noi_dung, trang_thai) values (N'$noi_dung', N'$trang_thai')";
 			Root::getConnect()->query($query);	
