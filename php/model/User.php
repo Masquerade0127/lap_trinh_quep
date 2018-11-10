@@ -14,6 +14,9 @@ class User extends Root{
 			return $value["password"];
 		}
 	}
+	function logout(){
+		session_destroy();
+	}
 }
 /*$r = new User();
 echo "wtf".$r->getPassword(1);*/

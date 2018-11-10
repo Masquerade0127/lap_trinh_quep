@@ -2,6 +2,11 @@
 	include("../../html/component/header.html");
 	include("../../html/component/menu.html")
 ?>
+<?php
+	include("model/Root.php");
+	$loggin = new Root();
+	$loggin->checkLoggin();
+?>
 <link rel="stylesheet" type="text/css" href="../../css/taocauhoi.css">
 <div id="content"style="height: 700px">
 	<div id="user" class="col-12">
@@ -62,8 +67,3 @@
 <?php
 	include("../../html/component/footer.html")
 ?>
-
-
-	           
-	            
-	        
