@@ -32,7 +32,7 @@ class HinhAnh extends Root{
 	 * input: ten hinh anh
 	 * output: url tap tin luu hinh anh
 	 */
-	function insertImages($image_name, $url){
+	function loadImages($image_name, $url){
 		if($image_name["size"] >= 0){
 			$file_tmp = $image_name["tmp_name"];
 
@@ -65,5 +65,8 @@ class HinhAnh extends Root{
 	 * input: ten hinh anh
 	 * output: none
 	 */
+	function insertUrlImages($image_name){
+		
+	}
 }
 ?>

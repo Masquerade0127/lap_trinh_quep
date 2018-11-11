@@ -16,6 +16,7 @@ class Connect{
 		}
 		return $connect;
 		/*$connect = new PDO("mysql:dbname=lap_trinh_quep;host:localhost;charset:utf8", "root", "");
+		$connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		return $connect;*/
 	}
 }

@@ -15,6 +15,9 @@ class Root extends Connect{
 	 */
 	function getColumnValue($id, $table, $column){
 		$query = "select $column from $table where ID=$id";
+		/*$query->bindParam(":column", $column);
+		$query->bindParam(":table", $table);
+		$query->bindParam(":id", $id);*/
 		$result = Connect::getConnect()->query($query);
 		$index = 0;
 		while ($row = mysqli_fetch_assoc($result)) {

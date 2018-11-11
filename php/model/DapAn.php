@@ -48,7 +48,25 @@ class DapAn extends Root{
 			Root::getConnect()->query($query);	
 		}
 	}
-	
+
+	/*
+	 * lay dap an theo id cau hoi
+	 * input: id cau hoi
+	 * output: mang cac dap an
+	 */
+	function getDapAn($id_cau_hoi, $trang_thai){
+		$query = "select noi_dung from dap_an, cauhoi_dapan 
+					where cauhoi_dapan.ma_cau_hoi=$id_cau_hoi
+					and dap_an.ID=cauhoi_dapan.ma_dap_an
+					and trang_thai='$trang_thai'";
+		$result = $this->getConnect()->query($query);
+		$index = 0;
+		while ($row = mysqli_fetch_assoc($result)) {
+			$array[$index] = $row;
+			$index++;
+		}
+		return $array;
+	}
 }
 /*$dap_an = new DapAn();
 $dap_an->setCauHoi(1, "2", "dung");*/

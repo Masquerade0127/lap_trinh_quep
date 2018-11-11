@@ -2,13 +2,8 @@
 	include("../../html/component/header.html");
 	include("../../html/component/menu.html")
 ?>
-<?php
-	include("model/Root.php");
-	$loggin = new Root();
-	$loggin->checkLoggin();
-?>
 <link rel="stylesheet" type="text/css" href="../../css/taocauhoi.css">
-<div id="content"style="height: 700px">
+<div id="content">
 	<div id="user" class="col-12">
 			<div class="btn-group" role="group" aria-label="Button group with nested dropdown" style="margin-top: 1%;text-align: right;border-radius: 10px">
   				<div class="file-attachment-group" style="background-color: white;height: 60px;width: 100%">
@@ -23,7 +18,9 @@
 	</div>
 	<div id="noidung" style="display: inline;">
 		<div class="col-3" id="menu_left">
-			
+			<?php
+				include("../../html/component/menu_left.php")
+			?>
 		</div>
 		<div class="col-8" id="menu_right"">
 			<div class="form-create-question-wrapper" style="margin-top: 5%">
@@ -58,12 +55,113 @@
 					<button type="button" class="btn" style="margin-left:30%; margin-top: 5%;margin-bottom: 2%">Tạo đề</button>
 					
 				</form>
-
+			</div>
+		</div>
+			<div class="col-8" class="form-create-question-wrapper" style="margin-top: 5%;background-color: white;margin-left: 30%;border-radius: 10px">
+				<center><b><h1>TẠO ĐỀ THI</h1></b></center>
+				<table class="table table-bordered">
+				  <thead>
+				    <tr>
+				      <th colspan="6" style="color: #808080">Câu 1: Triều là cục cưng của ai?</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th colspan="3" style="color: #808080">A. Vui</th>
+				      <th colspan="3" style="color: #808080">B.MẸ TRIỀU</th>
+				    </tr>
+				  </tbody>
+				  <tbody>
+				    <tr>
+				      <th colspan="3" style="color: #808080">C.HONG BIẾT</th>
+				       <th colspan="3" style="color: #808080">D. EM CHỨ AI</th>
+				    </tr>
+				  </tbody>
+				 </thead>
+				  <thead>
+				    <tr>
+				      <th colspan="6" style="color: #808080">Câu 1: Triều là cục cưng của ai?</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th colspan="3" style="color: #808080">A. Vui</th>
+				      <th colspan="3" style="color: #808080">B.MẸ TRIỀU</th>
+				    </tr>
+				  </tbody>
+				  <tbody>
+				    <tr>
+				      <th colspan="3" style="color: #808080">C.HONG BIẾT</th>
+				       <th colspan="3" style="color: #808080">D. EM CHỨ AI</th>
+				    </tr>
+				  </tbody>
+				 </thead>
+				  <thead>
+				    <tr>
+				      <th colspan="6" style="color: #808080">Câu 1: Triều là cục cưng của ai?</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th colspan="3" style="color: #808080">A. Vui</th>
+				      <th colspan="3" style="color: #808080">B.MẸ TRIỀU</th>
+				    </tr>
+				  </tbody>
+				  <tbody>
+				    <tr>
+				      <th colspan="3" style="color: #808080">C.HONG BIẾT</th>
+				       <th colspan="3" style="color: #808080">D. EM CHỨ AI</th>
+				    </tr>
+				  </tbody>
+				 </thead>
+				  <thead>
+				    <tr>
+				      <th colspan="6" style="color: #808080">Câu 1: Triều là cục cưng của ai?</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th colspan="3" style="color: #808080">A. Vui</th>
+				      <th colspan="3" style="color: #808080">B.MẸ TRIỀU</th>
+				    </tr>
+				  </tbody>
+				  <tbody>
+				    <tr>
+				      <th colspan="3" style="color: #808080">C.HONG BIẾT</th>
+				       <th colspan="3" style="color: #808080">D. EM CHỨ AI</th>
+				    </tr>
+				  </tbody>
+				 </thead>
+				  <thead>
+				    <tr>
+				      <th colspan="6" style="color: #808080">Câu 1: Triều là cục cưng của ai?</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th colspan="3" style="color: #808080">A. Vui</th>
+				      <th colspan="3" style="color: #808080">B.MẸ TRIỀU</th>
+				    </tr>
+				  </tbody>
+				  <tbody>
+				    <tr>
+				      <th colspan="3" style="color: #808080">C.HONG BIẾT</th>
+				       <th colspan="3" style="color: #808080">D. EM CHỨ AI</th>
+				    </tr>
+				  </tbody>
+				 </thead>
+				
+				</table>
 			</div>
 
 		</div>
-	</div>		
+	
 </div>
 <?php
 	include("../../html/component/footer.html")
 ?>
+
+
+	           
+	            
+	        

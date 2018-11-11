@@ -48,6 +48,22 @@ class CauHoi extends Root{
 			$this->getConnect()->query($query);	
 		}
 	}
+
+	/*
+	 * lay id,cau hoi theo mon va muc do
+	 * input: id mon, muc do
+	 * output: id cau hoi, noi dung cau hoi
+	 */
+	function getCauHoi($id_mon, $muc_do){
+		$query = "select ID, noi_dung from cau_hoi where ma_mon_hoc=$id_mon and muc_do='$muc_do'";
+		$result = $this->getConnect()->query($query);
+		$index = 0;
+		while ($row = mysqli_fetch_assoc($result)) {
+			$array[$index] = $row;
+			$index++;
+		}
+		return $array;
+	}
 }
 /*$cau_hoi = new CauHoi();
 $cau_hoi->insertCauHoi(1, "cà lê cà lê", 0);*/
