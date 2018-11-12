@@ -47,6 +47,12 @@ create table mon(
     foreign key (ma_nganh) references nganh(ID) on delete cascade on update cascade
 );
 
+create table mon_lop(
+	id_mon int not null,
+    id_lop int not null,
+    foreign key (id_mon) references mon(ID) on delete cascade on update cascade,
+    foreign key (id_lop) references lop(ID) on delete cascade on update cascade
+);
 create table user(
 	ID int not null primary key,
     password char(255) not null,
@@ -92,4 +98,3 @@ create table hinh_anh(
     url text not null,
     foreign key (ma_cau_hoi) references cau_hoi(ID) on delete cascade on update cascade
 );
-
