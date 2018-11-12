@@ -2,6 +2,11 @@
 	include("../../html/component/header.html");
 	include("../../html/component/menu.html")
 ?>
+<?php
+	include("model/Root.php");
+	$loggin = new Root();
+	$loggin->checkLoggin();
+?>
 <link rel="stylesheet" type="text/css" href="../../css/taocauhoi.css">
 <div id="content"style="height: 1000px">
 	<div id="user" class="col-12">
@@ -27,71 +32,27 @@
 				    <tr>
 				      <th scope="col" style="color: #808080">ID</th>
 				      <th scope="col" style="color: #808080">MÃ NGÀNH</th>
-				      <th scope="col" style="color: #808080">TÊN NGÀNH</th>
+				      <!-- <th scope="col" style="color: #808080">TÊN NGÀNH</th> -->
 				      <th scope="col" style="color: #808080">TÊN MÔN</th>
 				      <th scope="col"></th>
 				    </tr>
 				  </thead>
-				  <tbody>
-				    <tr>
-				      <th scope="row" style="color: #808080">123</th>
-				      <td style="color: #808080">123456</td>
-				      <td style="color: #808080">KTPM</td>
-				      <td style="color: #808080">Cấu trúc dữ liệu và giải thuật</td>
-				      <th scope="col">
-				      	<button type="button" class="btn" style="margin-left:10px ">Tạo câu hỏi</button>
-				      	<button type="button" class="btn" style="margin-left:10px ">Tạo đề</button>
-				      </th>
-				    </tr>
-				  </tbody>
-				  <tbody>
-				    <tr>
-				      <th scope="row" style="color: #808080">123</th>
-				      <td style="color: #808080">123456</td>
-				      <td style="color: #808080">KTPM</td>
-				      <td style="color: #808080">Cấu trúc dữ liệu và giải thuật</td>
-				      <th scope="col">
-				      	<button type="button" class="btn" style="margin-left:10px ">Tạo câu hỏi</button>
-				      	<button type="button" class="btn" style="margin-left:10px ">Tạo đề</button>
-				      </th>
-				    </tr>
-				  </tbody>
-				  <tbody>
-				    <tr>
-				      <th scope="row" style="color: #808080">123</th>
-				      <td style="color: #808080">123456</td>
-				      <td style="color: #808080">KTPM</td>
-				      <td style="color: #808080">Cấu trúc dữ liệu và giải thuật</td>
-				      <th scope="col">
-				      	<button type="button" class="btn" style="margin-left:10px ">Tạo câu hỏi</button>
-				      	<button type="button" class="btn" style="margin-left:10px ">Tạo đề</button>
-				      </th>
-				    </tr>
-				  </tbody>
-				  <tbody>
-				    <tr>
-				      <th scope="row" style="color: #808080">123</th>
-				      <td style="color: #808080">123456</td>
-				      <td style="color: #808080">KTPM</td>
-				      <td style="color: #808080">Cấu trúc dữ liệu và giải thuật</td>
-				      <th scope="col">
-				      	<button type="button" class="btn" style="margin-left:10px ">Tạo câu hỏi</button>
-				      	<button type="button" class="btn" style="margin-left:10px ">Tạo đề</button>
-				      </th>
-				    </tr>
-				  </tbody>
-				  <tbody>
-				    <tr>
-				      <th scope="row" style="color: #808080">123</th>
-				      <td style="color: #808080">123456</td>
-				      <td style="color: #808080">KTPM</td>
-				      <td style="color: #808080">Cấu trúc dữ liệu và giải thuật</td>
-				      <th scope="col">
-				      	<button type="button" class="btn" style="margin-left:10px ">Tạo câu hỏi</button>
-				      	<button type="button" class="btn" style="margin-left:10px ">Tạo đề</button>
-				      </th>
-				    </tr>
-				  </tbody>
+				  <?php
+				  	require("../process/danh_sach_mon.php");
+				  	foreach ($danh_sach as $value) {
+				  		echo "<tbody>
+						    <tr>
+						      <th scope='row' style='color: #808080'>".$value["ID"]."</th>
+						      <td style='color: #808080'>".$value["ma_nganh"]."</td>
+						      <td style='color: #808080'>".$value["ten_mon"]."</td>
+						      <th scope='col'>
+						      	<button type='button' class='btn' style='margin-left:10px'>Tạo câu hỏi</button>
+						      	<button type='button' class='btn' style='margin-left:10px '>Tạo đề</button>
+						      </th>
+						    </tr>
+						</tbody>";
+				  	}
+				  ?>
 				</table>
 			</div>
 		</div>
@@ -100,8 +61,3 @@
 <?php
 	include("../../html/component/footer.html")
 ?>
-
-
-	           
-	            
-	        

@@ -1,5 +1,5 @@
 <?php
-require("Root.php");
+require_once("Root.php");
 class User extends Root{
 	private $password;
 
@@ -13,6 +13,9 @@ class User extends Root{
 		foreach ($this->getColumnValue($id, "user", "password") as $value) {
 			return $value["password"];
 		}
+	}
+	function logout(){
+		session_destroy();
 	}
 }
 /*$r = new User();

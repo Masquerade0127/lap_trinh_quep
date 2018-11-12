@@ -1,5 +1,5 @@
 <?php
-require("Root.php");
+require_once("Root.php");
 class Nganh extends Root{
 	private $ma_khoa;
 	private $ten_nganh;

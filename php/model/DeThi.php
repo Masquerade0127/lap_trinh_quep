@@ -1,5 +1,5 @@
 <?php
-require("Root.php");
+require_once("Root.php");
 class DeThi extends AnotherClass
 {
 	private $ma_giang_vien;

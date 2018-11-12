@@ -1,5 +1,5 @@
 <?php
-require("Root");
+require_once("Root");
 class Lop extends Root{
 	private $ma_nganh;
 	private $ma_nien_khoa;

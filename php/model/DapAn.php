@@ -1,5 +1,5 @@
 <?php
-require("Root.php");
+require_once("Root.php");
 class DapAn extends Root{
 	private $ma_cau_hoi;
 	private $noi_dung;
@@ -42,13 +42,31 @@ class DapAn extends Root{
 	 * input: id noi dung, dap an
 	 * output: none
 	 */
-	function setDapAn($noi_dung, $trang_thai){
+	function insertDapAn($noi_dung, $trang_thai){
 		if($noi_dung != ""){
 			$query = "insert into dap_an (noi_dung, trang_thai) values (N'$noi_dung', N'$trang_thai')";
 			Root::getConnect()->query($query);	
 		}
 	}
-	
+
+	/*
+	 * lay dap an theo id cau hoi
+	 * input: id cau hoi
+	 * output: mang cac dap an
+	 */
+	function getDapAn($id_cau_hoi, $trang_thai){
+		$query = "select noi_dung from dap_an, cauhoi_dapan 
+					where cauhoi_dapan.ma_cau_hoi=$id_cau_hoi
+					and dap_an.ID=cauhoi_dapan.ma_dap_an
+					and trang_thai='$trang_thai'";
+		$result = $this->getConnect()->query($query);
+		$index = 0;
+		while ($row = mysqli_fetch_assoc($result)) {
+			$array[$index] = $row;
+			$index++;
+		}
+		return $array;
+	}
 }
 /*$dap_an = new DapAn();
 $dap_an->setCauHoi(1, "2", "dung");*/

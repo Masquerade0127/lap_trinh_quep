@@ -32,9 +32,9 @@
 								<div style="justify-content: space-between;width: 450px">
 									<div class="file-attachment-group">
 										<select name="cauhoi" class="form-control" style="width: 100px">
-					    					<option selected>De</option>
-					    					<option value="volvo">Trung binh</option>
-					   						<option value="fiat">Kho</option>
+					    					<option value="0">Dễ</option>
+					    					<option value="1">Trung bình</option>
+					   						<option value="2">Khó</option>
 					   					</select>
 				   			 			<input style="border-radius: 10px;background-color: #0033CC;width: 100%" type="file" class="alert-link" name="image_cau_hoi"></input>
 									</div>
@@ -50,8 +50,8 @@
 								<div style="justify-content: space-between;width: 450px">
 									<div class="file-attachment-group">
 										<select name="dapan1" class="form-control" style="width: 100px">
-					    					<option selected>Sai</option>
-					    					<option value="volvo">Đúng</option>
+					    					<option value="sai" selected>Sai</option>
+					    					<option value="dung">Đúng</option>
 					   					 </select>
 					   			 		<input style="border-radius: 10px;background-color: #0033CC;width: 100%" type="file" class="alert-link" name="image_dapan1"></input>
 									</div>
@@ -66,8 +66,8 @@
 								<div style="justify-content: space-between;width: 450px">
 									<div class="file-attachment-group">
 										<select name="dapan2" class="form-control" style="width: 100px">
-					    					<option selected>Sai</option>
-					    					<option value="volvo">Đúng</option>
+					    					<option value="sai" selected>Sai</option>
+					    					<option value="dung">Đúng</option>
 					   					 </select>
 					   			 		<input style="border-radius: 10px;background-color: #0033CC;width: 100%" type="file" class="alert-link" name="image_dapan2 value="thêm tệp></input>
 									</div>
@@ -82,8 +82,8 @@
 								<div style="justify-content: space-between;width: 450px">
 									<div class="file-attachment-group">
 										<select name="dapan3" class="form-control" style="width: 100px">
-					    					<option selected>Sai</option>
-					    					<option value="volvo">Đúng</option>
+					    					<option value="sai" selected>Sai</option>
+					    					<option value="dung">Đúng</option>
 					   					 </select>
 					   			 		<input style="border-radius: 10px;background-color: #0033CC;width: 100%" type="file" class="alert-link" name="image_dapan3"></input>
 									</div>
@@ -98,8 +98,8 @@
 								<div style="justify-content: space-between;width: 450px">
 									<div class="file-attachment-group">
 										<select name="dapan4" class="form-control" style="width: 100px">
-					    					<option selected>Sai</option>
-					    					<option value="volvo">Đúng</option>
+					    					<option value="sai" selected>Sai</option>
+					    					<option value="dung">Đúng</option>
 					   					 </select>
 					   			 		<input style="border-radius: 10px;background-color: #0033CC;width: 100%" type="file" class="alert-link" name="image_dapan4"></input>
 									</div>
@@ -114,8 +114,8 @@
 								<div style="justify-content: space-between;width: 450px">
 									<div class="file-attachment-group">
 										<select name="dapan5" class="form-control" style="width: 100px">
-					    					<option selected>Sai</option>
-					    					<option value="volvo">Đúng</option>
+					    					<option value="sai" selected>Sai</option>
+					    					<option value="dung">Đúng</option>
 					   					 </select>
 					   			 		<input style="border-radius: 10px;background-color: #0033CC;width: 100%" type="file" class="alert-link" name="image_dapan5"></input>
 									</div>
@@ -130,8 +130,8 @@
 								<div style="width: 450px">
 									<div class="file-attachment-group">
 										<select name="dapan6" class="form-control" style="width: 100px">
-					    					<option selected>Sai</option>
-					    					<option value="volvo">Đúng</option>
+					    					<option value="sai" selected>Sai</option>
+					    					<option value="dung">Đúng</option>
 					   					 </select>
 					   			 		<input style="border-radius: 10px;background-color: #0033CC;width: 100%" type="file" class="alert-link" name="image_dapan6"></input>
 									</div>

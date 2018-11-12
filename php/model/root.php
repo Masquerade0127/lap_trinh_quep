@@ -15,6 +15,9 @@ class Root extends Connect{
 	 */
 	function getColumnValue($id, $table, $column){
 		$query = "select $column from $table where ID=$id";
+		/*$query->bindParam(":column", $column);
+		$query->bindParam(":table", $table);
+		$query->bindParam(":id", $id);*/
 		$result = Connect::getConnect()->query($query);
 		$index = 0;
 		while ($row = mysqli_fetch_assoc($result)) {
@@ -72,10 +75,10 @@ class Root extends Connect{
 		Connect::getConnect()->query($query);
 	}
 }
-$khoa = new Root();
-/*foreach ($khoa->getColumnValue(2,"khoa","*") as $key => $value) {
+/*$khoa = new Root();
+foreach ($khoa->getColumnValue(2,"khoa","*") as $key => $value) {
  	echo $value["ten_khoa"];
-}*/
+}
 // $khoa->insertUser(1, "12345");
-$khoa->insertUser(1, 1);
+$khoa->insertUser(1, 1);*/
 ?>

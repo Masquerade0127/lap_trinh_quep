@@ -42,13 +42,29 @@ class CauHoi extends Root{
 	 * input: noi dung, muc do
 	 * output: none
 	 */
-	function insertCauHoi($noi_dung,$muc_do){
+	function insertCauHoi($ma_mon_hoc,$noi_dung,$muc_do){
 		if($noi_dung != ""){
-			$query = "insert into cau_hoi (noi_dung,muc_do) values (N'$noi_dung', $muc_do)";
-			Root::getConnect()->query($query);	
+			$query = "insert into cau_hoi (ma_mon_hoc,noi_dung,muc_do) values ($ma_mon_hoc, N'$noi_dung', $muc_do)";
+			$this->getConnect()->query($query);	
 		}
+	}
+
+	/*
+	 * lay id,cau hoi theo mon va muc do
+	 * input: id mon, muc do
+	 * output: id cau hoi, noi dung cau hoi
+	 */
+	function getCauHoi($id_mon, $muc_do){
+		$query = "select ID, noi_dung from cau_hoi where ma_mon_hoc=$id_mon and muc_do='$muc_do'";
+		$result = $this->getConnect()->query($query);
+		$index = 0;
+		while ($row = mysqli_fetch_assoc($result)) {
+			$array[$index] = $row;
+			$index++;
+		}
+		return $array;
 	}
 }
 /*$cau_hoi = new CauHoi();
-$cau_hoi->setCauHoi("cà lê cà lê", 0);*/
+$cau_hoi->insertCauHoi(1, "cà lê cà lê", 0);*/
 ?>

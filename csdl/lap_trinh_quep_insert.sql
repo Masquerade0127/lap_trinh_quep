@@ -33,6 +33,13 @@ values (3, N'kỹ thuật lập trình');
 insert into mon(ma_nganh, ten_mon)
 values (3, N'toán rời rạc');
 
+insert into mon_lop(id_mon, id_lop)
+values (1,1);
+insert into mon_lop(id_mon, id_lop)
+values (2,1);
+insert into mon_lop(id_mon, id_lop)
+values (3,1);
+
 insert into cau_hoi(ma_mon_hoc, noi_dung, muc_do)
 values (1, N'Ram là gì', '0');
 insert into cau_hoi(ma_mon_hoc, noi_dung, muc_do)

@@ -1,5 +1,5 @@
 <?php
-require("Root.php");
+require_once("Root.php");
 class Mon extends Root
 {
 	private $ma_nganh;
