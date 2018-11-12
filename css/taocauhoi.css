@@ -63,3 +63,31 @@
 	#noidung #menu_left ul a{
 		margin-top: 10%
 	}
+
+
+	#Message{
+		color: red;
+		font-size: 75%;
+		margin-right: 30%;
+		float: right;
+		opacity: 0;
+	}
+
+	#Message2{
+		color: red;
+		font-size: 75%;
+		margin-right: 30%;
+		float: right;
+		opacity: 0;
+		display: block;
+	}
+
+	#Message3{
+		color: red;
+		font-size: 75%;
+		margin-right: 30%;
+		float: right;
+		opacity: 0;
+		display: block;
+	}
+	
