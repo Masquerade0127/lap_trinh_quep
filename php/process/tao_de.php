@@ -6,7 +6,7 @@ require("../model/cauhoi_dapan.php");
 		$dap_an = new DapAn();
 		$cauhoi_dapan = new CauHoi_DapAn();
 		
-		
+		$cau_hoi->getCauHoi(1, 2);
 		/*if(isset($_POST["submit"])){
 			if(isset($_POST["ch_de"])){
 				$id_cauhoi = $cau_hoi->getCauHoi(1, 2);

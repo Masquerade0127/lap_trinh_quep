@@ -37,22 +37,21 @@
 					    </select>
 					</div>
 					<div>
-						<label for="">Nhập số câu hỏi:</label>
-						<input type="" name="" class="form-control" style="width: 70%" style="background-color: EEEEEE " />
+						<label for="">Nhập số câu hỏi dễ:</label>
+						<input id="OpenMess" name="chde" class="form-control" style="width: 70%"/>
+						<label id="Message">Số lượng câu hỏi phải là số và lớn hơn 0</label>
 					</div>
-					<div>
-						<label for="">Nhập câu hỏi dễ:</label>
-						<input type="" name="ch_de" class="form-control" style="width: 70%"/>
+					<div style="">
+						<label for="">Nhập số câu hỏi trung bình:</label>
+						<input id="OpenMess2" name="" class="form-control" style="width: 70%"/>
+						<label id="Message2">Số lượng câu hỏi phải là số và lớn hơn 0</label>
 					</div>
-					<div>
-						<label for="">Nhập câu hỏi trung bình:</label>
-						<input type="" name="ch_tb" class="form-control" style="width: 70%"/>
+					<div style="">
+						<label for="">Nhập số câu hỏi khó:</label>
+						<input id="OpenMess3" name="" class="form-control" style="width: 70%"/>
+						<label id="Message3">Số lượng câu hỏi phải là số và lớn hơn 0</label>
 					</div>
-					<div>
-						<label for="">Nhập câu hỏi khó:</label>
-						<input type="" name="ch_kho" class="form-control" style="width: 70%"/>
-					</div>
-					<button type="button" class="btn" style="margin-left:30%; margin-top: 5%;margin-bottom: 2%">Tạo đề</button>
+					<button id="An_nut" type="button" class="btn" style="margin-left:30%; margin-top: 5%;margin-bottom: 2%">Tạo đề</button>
 					
 				</form>
 			</div>
@@ -81,7 +80,7 @@
 		<div id="ajaxDiv">
 			
 		</div>
-			<!-- <div class="col-8" class="form-create-question-wrapper" style="margin-top: 5%;background-color: white;margin-left: 30%;border-radius: 10px">
+			<div class="col-8" class="form-create-question-wrapper" style="margin-top: 5%;background-color: white;margin-left: 30%;border-radius: 10px">
 				<center><b><h1>TẠO ĐỀ THI</h1></b></center>
 				<table class="table table-bordered">
 				  <thead>
@@ -176,11 +175,12 @@
 				 </thead>
 				
 				</table>
-			</div>  -->
+			</div> 
 
 		</div>
 	
 </div>
+<script src="../../js/taode.js"></script>
 <?php
 	include("../../html/component/footer.html")
 ?>

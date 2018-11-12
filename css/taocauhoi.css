@@ -1,3 +1,4 @@
+ /**{border: 1px solid red;} */
 .user-create-question {
 		
 		border:1px solid red;
@@ -63,3 +64,32 @@
 	#noidung #menu_left ul a{
 		margin-top: 10%
 	}
+
+
+	#Message{
+		color: red;
+		font-size: 75%;
+		margin-right: 30%;
+		opacity: 0;
+		display: block;
+		text-align: right;
+	}
+
+	#Message2{
+		color: red;
+		font-size: 75%;
+		margin-right: 30%;
+		text-align: right;
+		opacity: 0;
+		display: block;
+	}
+
+	#Message3{
+		color: red;
+		font-size: 75%;
+		margin-right: 30%;
+		text-align: right;
+		opacity: 0;
+		display: block;
+	}
+	
