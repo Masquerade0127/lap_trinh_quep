@@ -5,10 +5,22 @@ require("../model/cauhoi_dapan.php");
 		$cau_hoi = new CauHoi();
 		$dap_an = new DapAn();
 		$cauhoi_dapan = new CauHoi_DapAn();
-		$id_cauhoi = $cau_hoi->getCauHoi(1, 2);
-		shuffle($id_cauhoi);
-		$dap_an->getDapAn($value["ID"], "sai");
 		
+		
+		/*if(isset($_POST["submit"])){
+			if(isset($_POST["ch_de"])){
+				$id_cauhoi = $cau_hoi->getCauHoi(1, 2);
+				shuffle($id_cauhoi);
+				foreach ($id_cauhoi as $value) {
+					echo $value["noi_dung"]."<br>"."<hr>";
+					$cau_hoi = $dap_an->getDapAn($value["ID"], "sai");
+					shuffle($cau_hoi);
+					foreach ($cau_hoi as $value) {
+						echo $value["noi_dung"];
+					}
+				}
+			}
+		}*/
 		/*foreach ($id_cauhoi as $value) {
 			echo $value["noi_dung"]."<br>";
 			$ds_dap_an = 

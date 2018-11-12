@@ -41,23 +41,47 @@
 						<input type="" name="" class="form-control" style="width: 70%" style="background-color: EEEEEE " />
 					</div>
 					<div>
-						<label for="">Nhập câu hỏi khó:</label>
-						<input type="" name=""class="form-control" style="width: 70%"/>
-					</div>
-					<div>
 						<label for="">Nhập câu hỏi dễ:</label>
-						<input type="" name=""class="form-control" style="width: 70%"/>
+						<input type="" name="ch_de" class="form-control" style="width: 70%"/>
 					</div>
 					<div>
 						<label for="">Nhập câu hỏi trung bình:</label>
-						<input type="" name=""class="form-control" style="width: 70%"/>
+						<input type="" name="ch_tb" class="form-control" style="width: 70%"/>
+					</div>
+					<div>
+						<label for="">Nhập câu hỏi khó:</label>
+						<input type="" name="ch_kho" class="form-control" style="width: 70%"/>
 					</div>
 					<button type="button" class="btn" style="margin-left:30%; margin-top: 5%;margin-bottom: 2%">Tạo đề</button>
 					
 				</form>
 			</div>
 		</div>
-			<div class="col-8" class="form-create-question-wrapper" style="margin-top: 5%;background-color: white;margin-left: 30%;border-radius: 10px">
+		<script type="text/javascript">
+			function ajaxFunction(){
+				//tao bien
+				var ajaxRequest;
+				if(window.XMLHttpRequest){
+					ajaxRequest = new XMLHttpRequest();
+				}
+				else{
+					ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+
+				//tao ham cap nhat khu vuc div
+				ajaxRequest.onreadystatechange = function(){
+					if(ajaxRequest.readyState == 4){
+						var ajaxDisplay = document.getElementById("ajaxDisplay");
+						ajaxDisplay.innerHTML = ajaxRequest.responseText;
+					}
+				}
+			}
+		</script>
+
+		<div id="ajaxDiv">
+			
+		</div>
+			<!-- <div class="col-8" class="form-create-question-wrapper" style="margin-top: 5%;background-color: white;margin-left: 30%;border-radius: 10px">
 				<center><b><h1>TẠO ĐỀ THI</h1></b></center>
 				<table class="table table-bordered">
 				  <thead>
@@ -152,7 +176,7 @@
 				 </thead>
 				
 				</table>
-			</div>
+			</div>  -->
 
 		</div>
 	
