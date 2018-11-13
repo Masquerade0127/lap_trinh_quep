@@ -1,5 +1,5 @@
 <?php
-require_once("Root");
+require_once("root.php");
 class Lop extends Root{
 	private $ma_nganh;
 	private $ma_nien_khoa;
@@ -47,6 +47,21 @@ class Lop extends Root{
 	}
 	public function getTenlop(){
 		return $this->ten_lop;
+	}
+	/*
+	 * select tat ca lop thuoc nganh
+	 * input: id nganh
+	 * output: mang cac lop
+	 */
+	function getLop($id_nganh){
+		$query = "select ten_lop,ID from lop where ma_nganh=$id_nganh";
+		$result = Root::getConnect()->query($query);
+		$index = 0;
+		while ($row = mysqli_fetch_assoc($result)) {
+			$array[$index] = $row;
+			$index++;
+		}
+		return $array;
 	}
 }
 ?>
