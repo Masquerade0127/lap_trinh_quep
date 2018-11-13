@@ -30,7 +30,7 @@ class Nganh extends Root{
 	 * output: mang cac nganh
 	 */
 	function getNganh($id_khoa){
-		$query = "select ten_nganh from nganh where ma_khoa=$id_khoa";
+		$query = "select ten_nganh,ID from nganh where ma_khoa=$id_khoa";
 		$result = Root::getConnect()->query($query);
 		$index = 0;
 		while ($row = mysqli_fetch_assoc($result)) {
