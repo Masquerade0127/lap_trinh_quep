@@ -1,12 +1,8 @@
 <?php
 	include("../../html/component/header.html");
-	include("../../html/component/menu.html")
+	include_once("../../html/component/menu.php");
 ?>
-<?php
-	include("model/Root.php");
-	$loggin = new Root();
-	$loggin->checkLoggin();
-?>
+
 <link rel="stylesheet" type="text/css" href="../../css/taocauhoi.css">
 <div id="content"style="height: 1000px">
 	<div id="user" class="col-12">
@@ -23,9 +19,13 @@
 	</div>
 	<div id="noidung" style="display: inline;">
 		<div class="col-3" id="menu_left">
-			
+			<?php 
+				include("../../html/component/menu_left.php");
+			?>
 		</div>
-		<div class="col-8" id="menu_right"">
+		<div class="col-8" id="menu_right">
+				
+			
 			<div class="form-create-question-wrapper" style="margin-top: 5%">
 					<table class="table table-bordered">
 				  <thead>
@@ -38,16 +38,16 @@
 				    </tr>
 				  </thead>
 				  <?php
-				  	require("../process/danh_sach_mon.php");
+				  	require("../process/danh_sach_mon.php");	 
 				  	foreach ($danh_sach as $value) {
 				  		echo "<tbody>
 						    <tr>
-						      <th scope='row' style='color: #808080'>".$value["ID"]."</th>
+						      <th scope='row' style='color: #808080' >".$value["ID"]."</th>
 						      <td style='color: #808080'>".$value["ma_nganh"]."</td>
 						      <td style='color: #808080'>".$value["ten_mon"]."</td>
 						      <th scope='col'>
-						      	<button type='button' class='btn' style='margin-left:10px'>Tạo câu hỏi</button>
-						      	<button type='button' class='btn' style='margin-left:10px '>Tạo đề</button>
+						      	<a href='taocauhoi.php?".$value["ID"]."' ><button type='submit' class='btn' style='margin-left:10px'>Tạo câu hỏi</button></a>
+						      	<a href='taode.php?".$value["ID"]."' ><button type='submit' class='btn' style='margin-left:10px '>Tạo đề</button></a>
 						      </th>
 						    </tr>
 						</tbody>";
