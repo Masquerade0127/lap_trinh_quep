@@ -1,18 +1,4 @@
-<!--
- <ul class="nav nav-pills flex-column">
-  <li class="nav-item" style="">
-    <a class="nav-link" href="#">Item 1</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Item 2</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Item 3</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Item 4</a>
-  </li>
-</ul>  -->
+
 <style>
 	html,
 	body {
@@ -59,17 +45,14 @@
 
     <div class="container-fluid" style="float: left; margin-top: 5%">
         <div class="sidebar-offcanvas" id="sidebar">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">I'm the Sidebar</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
+          <iv class="list-group">
+           <?php 
+				include("C:/xampp/htdocs/lap_trinh_quep/php/process/menu_left.php");
+				foreach($lop1 as $value){
+					echo "<a class='list-group-item' href='../../php/views/monhoc.php?".$value["ID"]."'>".$value["ten_lop"]."</a>";
+					
+					}
+			?>
           </div>
         </div><!--/.sidebar-offcanvas-->
 
