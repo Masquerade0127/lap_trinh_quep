@@ -16,14 +16,14 @@
 	        				Khoa CNTT
 	        			</a>
 	                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="margin-top: 8%;">
-                        <!--Ngành thuộc khoa-->
+                        <!--Ngành thuộc khoa-->                       
 	                        <?php 
 	                        	include("C:/xampp/htdocs/lap_trinh_quep/php/process/menu.php");
 								foreach($nganh1 as $value){
-									echo "<a class='dropdown-item chu_xanh' href='#' style='color: blue;'>".$value['ten_nganh']."</a>";
+									echo "<a class='dropdown-item chu_xanh' style='color: blue;' href='../../php/views/monhoc.php?".$value["ID"]."'>".$value['ten_nganh']."</a>";
 								}
 	                        ?>
-	                    </div>
+					   </div>
 	                </li>
 	                <!-- lien he -->
 	                <li class="nav-item">
