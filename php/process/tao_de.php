@@ -5,33 +5,38 @@ require("../model/cauhoi_dapan.php");
 		$cau_hoi = new CauHoi();
 		$dap_an = new DapAn();
 		$cauhoi_dapan = new CauHoi_DapAn();
-		
-		$cau_hoi->getCauHoi(1, 2);
-		/*if(isset($_POST["submit"])){
-			if(isset($_POST["ch_de"])){
-				$id_cauhoi = $cau_hoi->getCauHoi(1, 2);
-				shuffle($id_cauhoi);
-				foreach ($id_cauhoi as $value) {
-					echo $value["noi_dung"]."<br>"."<hr>";
-					$cau_hoi = $dap_an->getDapAn($value["ID"], "sai");
-					shuffle($cau_hoi);
-					foreach ($cau_hoi as $value) {
-						echo $value["noi_dung"];
-					}
-				}
-			}
-		}*/
-		/*foreach ($id_cauhoi as $value) {
-			echo $value["noi_dung"]."<br>";
-			$ds_dap_an = 
-			foreach ($ds_dap_an as $value_1) {
-				echo $value_1["noi_dung"]."-"."<hr>";
-			}
-		}*/
-		/*$array_l = $cauhoi_dapan->getCauHoi_DapAn(1,2);*/
-		/*shuffle($array_l);
-		//lay mang cau hoi va dap an
-		foreach ($array_l as $value) {
-			echo $value["cau_hoi"]." ".$value["dap_an"]."<br>";
-		}*/
+
+		//get cau hoi
+		$ch_de = $cau_hoi->getCauHoi(1, 0);
+		$ch_tb = $cau_hoi->getCauHoi(1, 1);
+		$ch_kh = $cau_hoi->getCauHoi(1, 2);
+		$all_cau_hoi = array_merge($ch_de, $ch_tb, $ch_kh);
+		shuffle($all_cau_hoi);
+
+		echo "
+				<ol type='1'>";
+		foreach ($all_cau_hoi as $value) {
+			$dap_an_sai = $dap_an->getDapAn($value["ID"],"sai");
+			$dap_an_dung = $dap_an->getDapAn($value["ID"],"dung");
+			$tron_dap_an = array_merge($dap_an_sai, $dap_an_dung);
+			shuffle($tron_dap_an);
+			echo "
+					<li>
+						<thead>
+						    	<tr>
+						    		<th colspan='6' style='color: #808080'>".$value["noi_dung"]."</th>
+						    	</tr>
+						</thead>";
+				
+						echo "<ol type='A'>";
+						foreach ($tron_dap_an as $value_1) {
+							echo "
+								<li style=''>".$value_1["noi_dung"]."</li>";
+								
+						}
+						echo "</ol>";
+					echo "</li>";
+				
+		}
+			echo "</ol>";
 ?>

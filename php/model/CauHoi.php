@@ -64,6 +64,13 @@ class CauHoi extends Root{
 		}
 		return $array;
 	}
+
+	/*
+	 * lay cau hoi theo id mon
+	 * input: id mon hoc
+	 * output: array ten
+	 */
+	
 }
 /*$cau_hoi = new CauHoi();
 $cau_hoi->insertCauHoi(1, "cà lê cà lê", 0);*/
