@@ -18,7 +18,9 @@
 	</div>
 	<div id="noidung" style="display: inline;">
 		<div class="col-3" id="menu_left">
-			
+			<?php
+				include("../../html/component/menu_left.php");
+			?>
 		</div>
 		<div class="col-8" id="menu_right"">
 			<div class="form-create-question-wrapper" style="margin-top: 5%">

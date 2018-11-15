@@ -1,9 +1,9 @@
 <?php
 	include("../../html/component/header.html");
-	include("../../html/component/menu.html")
+	include("../../html/component/menu.php")
 ?>
 <link rel="stylesheet" type="text/css" href="../../css/taocauhoi.css">
-<div id="content">
+<div id="content" style="height: 100%">
 	<div id="user" class="col-12">
 			<div class="btn-group" role="group" aria-label="Button group with nested dropdown" style="margin-top: 1%;text-align: right;border-radius: 10px">
   				<div class="file-attachment-group" style="background-color: white;height: 60px;width: 100%">
@@ -28,15 +28,6 @@
 				<span class="kengang" style="width: 100%; height: 2px; background-color: #808080;display: inline-block;"></span>
 				<form action="/action_page.php" class="chon">
 					<div>
-						<label for="">Chọn môn:</label>
-						<select name="cars" class="form-control" style="width: 70%">
-					      <option selected>Chọn môn</option>
-					      <option value="volvo">Cấu trúc dữ liệu và giải thuật</option>
-					      <option value="fiat">Lập trình web</option>
-					      <option value="audi">Cơ sở dữ liệu</option>
-					    </select>
-					</div>
-					<div>
 						<label for="">Nhập số câu hỏi dễ:</label>
 						<input id="OpenMess" name="chde" class="form-control" style="width: 70%"/>
 						<label id="Message">Số lượng câu hỏi phải là số và lớn hơn 0</label>
@@ -51,7 +42,7 @@
 						<input id="OpenMess3" name="" class="form-control" style="width: 70%"/>
 						<label id="Message3">Số lượng câu hỏi phải là số và lớn hơn 0</label>
 					</div>
-					<button id="An_nut" type="button" class="btn" style="margin-left:30%; margin-top: 5%;margin-bottom: 2%">Tạo đề</button>
+					<button id="An_nut" type="button" class="btn" style="margin-left:30%; margin-top: 5%;margin-bottom: 2%" onclick="loadDoc()">Tạo đề</button>
 					
 				</form>
 			</div>
@@ -81,104 +72,10 @@
 			
 		</div>
 			<div class="col-8" class="form-create-question-wrapper" style="margin-top: 5%;background-color: white;margin-left: 30%;border-radius: 10px">
-				<center><b><h1>TẠO ĐỀ THI</h1></b></center>
-				<table class="table table-bordered">
-				  <thead>
-				    <tr>
-				      <th colspan="6" style="color: #808080">Câu 1: Triều là cục cưng của ai?</th>
-				    </tr>
-				  </thead>
-				  <tbody>
-				    <tr>
-				      <th colspan="3" style="color: #808080">A. Vui</th>
-				      <th colspan="3" style="color: #808080">B.MẸ TRIỀU</th>
-				    </tr>
-				  </tbody>
-				  <tbody>
-				    <tr>
-				      <th colspan="3" style="color: #808080">C.HONG BIẾT</th>
-				       <th colspan="3" style="color: #808080">D. EM CHỨ AI</th>
-				    </tr>
-				  </tbody>
-				 </thead>
-				  <thead>
-				    <tr>
-				      <th colspan="6" style="color: #808080">Câu 1: Triều là cục cưng của ai?</th>
-				    </tr>
-				  </thead>
-				  <tbody>
-				    <tr>
-				      <th colspan="3" style="color: #808080">A. Vui</th>
-				      <th colspan="3" style="color: #808080">B.MẸ TRIỀU</th>
-				    </tr>
-				  </tbody>
-				  <tbody>
-				    <tr>
-				      <th colspan="3" style="color: #808080">C.HONG BIẾT</th>
-				       <th colspan="3" style="color: #808080">D. EM CHỨ AI</th>
-				    </tr>
-				  </tbody>
-				 </thead>
-				  <thead>
-				    <tr>
-				      <th colspan="6" style="color: #808080">Câu 1: Triều là cục cưng của ai?</th>
-				    </tr>
-				  </thead>
-				  <tbody>
-				    <tr>
-				      <th colspan="3" style="color: #808080">A. Vui</th>
-				      <th colspan="3" style="color: #808080">B.MẸ TRIỀU</th>
-				    </tr>
-				  </tbody>
-				  <tbody>
-				    <tr>
-				      <th colspan="3" style="color: #808080">C.HONG BIẾT</th>
-				       <th colspan="3" style="color: #808080">D. EM CHỨ AI</th>
-				    </tr>
-				  </tbody>
-				 </thead>
-				  <thead>
-				    <tr>
-				      <th colspan="6" style="color: #808080">Câu 1: Triều là cục cưng của ai?</th>
-				    </tr>
-				  </thead>
-				  <tbody>
-				    <tr>
-				      <th colspan="3" style="color: #808080">A. Vui</th>
-				      <th colspan="3" style="color: #808080">B.MẸ TRIỀU</th>
-				    </tr>
-				  </tbody>
-				  <tbody>
-				    <tr>
-				      <th colspan="3" style="color: #808080">C.HONG BIẾT</th>
-				       <th colspan="3" style="color: #808080">D. EM CHỨ AI</th>
-				    </tr>
-				  </tbody>
-				 </thead>
-				  <thead>
-				    <tr>
-				      <th colspan="6" style="color: #808080">Câu 1: Triều là cục cưng của ai?</th>
-				    </tr>
-				  </thead>
-				  <tbody>
-				    <tr>
-				      <th colspan="3" style="color: #808080">A. Vui</th>
-				      <th colspan="3" style="color: #808080">B.MẸ TRIỀU</th>
-				    </tr>
-				  </tbody>
-				  <tbody>
-				    <tr>
-				      <th colspan="3" style="color: #808080">C.HONG BIẾT</th>
-				       <th colspan="3" style="color: #808080">D. EM CHỨ AI</th>
-				    </tr>
-				  </tbody>
-				 </thead>
-				
-				</table>
-			</div> 
-
+				<table id="demo"></table>
+			</div>
 		</div>
-	
+			
 </div>
 <script src="../../js/taode.js"></script>
 <?php
