@@ -13,8 +13,7 @@ require("../model/cauhoi_dapan.php");
 		$all_cau_hoi = array_merge($ch_de, $ch_tb, $ch_kh);
 		shuffle($all_cau_hoi);
 
-		echo "
-				<ol type='1'>";
+		echo "<ol type='1'>";
 		foreach ($all_cau_hoi as $value) {
 			$dap_an_sai = $dap_an->getDapAn($value["ID"],"sai");
 			$dap_an_dung = $dap_an->getDapAn($value["ID"],"dung");
@@ -40,3 +39,4 @@ require("../model/cauhoi_dapan.php");
 		}
 			echo "</ol>";
 ?>
+<center>XUAT FILE[<a href="http://localhost/lap_trinh_quep/TCPDF-master/examples/example_016.php" title="PDF [new window]" target="_blank">PDF</a>]</center>
